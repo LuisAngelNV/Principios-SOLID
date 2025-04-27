@@ -6,6 +6,28 @@ using System.Threading.Tasks;
 
 namespace PrinipiosSOLID._1_S_SRP
 {
+    /* Mala practica en SRP
+     * public class Producto
+{
+    public string Nombre { get; set; }
+    public decimal Precio { get; set; }
+
+    public decimal CalcularImpuesto()
+    {
+        return Precio * 0.16m;
+    }
+
+    public void ImprimirEtiqueta()
+    {
+        Console.WriteLine($"Producto: {Nombre}, Precio: {Precio}");
+    }
+
+    public void GuardarEnArchivo()
+    {
+        Console.WriteLine("Guardando información del producto en archivo...");
+    }
+}*/
+
     public class Producto
     {
         public string Nombre { get; set; }
