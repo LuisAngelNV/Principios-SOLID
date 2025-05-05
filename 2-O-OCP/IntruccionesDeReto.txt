@@ -1,0 +1,43 @@
+﻿																		🔹 Escenario:
+Tu jefe te dice que la tienda tiene distintos tipos de descuento:
+
+Descuento de verano.
+
+Descuento de fin de semana.
+
+Descuento por cliente VIP.
+
+Cada tipo de descuento calcula un porcentaje diferente sobre el precio de un producto.
+
+El sistema debe estar abierto para agregar nuevos descuentos en el futuro, pero sin necesidad de modificar el código existente.
+
+🔹 Tu misión:
+✅ Aplicar el principio OCP.
+✅ Usar interfaces y clases separadas.
+✅ El sistema debe poder agregar nuevos descuentos fácilmente sin romper lo anterior.
+
+🔹 Requisitos técnicos:
+1️ - Crear una interfaz IDescuento con un método:
+decimal CalcularDescuento(decimal precioOriginal);
+
+2️ - Crear tres clases que implementen IDescuento:
+
+DescuentoVerano → Aplica 10% de descuento.
+
+DescuentoFinDeSemana → Aplica 20% de descuento.
+
+DescuentoClienteVIP → Aplica 30% de descuento.
+
+3️ - Crear una clase CalculadoraDePrecios que:
+
+Tenga un método AplicarDescuento(decimal precioOriginal, IDescuento descuento).
+
+Este método debe usar la lógica de descuento de manera polimórfica.
+
+
+															Pistas:
+No uses if o switch para diferenciar tipos de descuento.
+
+Cada descuento debe ser una clase nueva.
+
+CalculadoraDePrecios no debe saber cuántos tipos de descuento existen
