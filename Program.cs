@@ -2,6 +2,7 @@
 using PrinipiosSOLID._2_O_OCP;
 using PrinipiosSOLID._3_L_LSP;
 using PrinipiosSOLID._3_L_LSP.Reto;
+using PrinipiosSOLID._4_I_ISP.Prueb;
 
 
 Console.WriteLine("Principios de SOLID");
@@ -59,4 +60,29 @@ List<IMetodoDePago> pagos = new List<IMetodoDePago>
 foreach (var metodo in pagos)
 {
     metodo.ProcesarPago(150);
+}
+Console.WriteLine("_______________________________________");
+Console.WriteLine("I - ISP");
+Console.WriteLine("Interface Segregation Principle (ISP");
+Console.WriteLine("Reto de programacion");
+List<IImprimible> impresorasOficina = new List<IImprimible>
+{
+    new ImpresoraBasica(),
+    new ImpresoraMultifuncional()
+};
+
+foreach (var impresoras in impresorasOficina)
+{
+    impresoras.ImpresionBasica();
+}
+
+List<IEscaneable> escaners = new List<IEscaneable>
+{
+    new Escaner(),
+    new ImpresoraMultifuncional()
+};
+
+foreach (var escaneres in escaners)
+{
+    escaneres.ImpresionProfesional();
 }
