@@ -1,0 +1,11 @@
+﻿📌 Caso de Estudio: Sistema de Pedidos (E-commerce)
+Requerimientos:
+1. Descuentos:
+Por temporada (Navidad, Black Friday).
+Por tipo de cliente (Regular, VIP).
+
+2. Métodos de Pago:
+Tarjeta de crédito, PayPal, Transferencia.
+
+3. Reglas de Envío:
+Estándar, Express, Gratis (para compras mayores a $500).
